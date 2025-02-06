@@ -26,7 +26,9 @@ function SingleRoute() {
                                 <span className="highlighted-price">4 249 som</span>
                                 <span>× 24 oy</span>
                             </div>
-                        </div>
+                        </div>git add .
+
+
                         <div className="action-buttons">
                             <button className="buy-now">1 klikda xarid qilish</button>
                             <button className="add-to-cart">Savatga qoshish</button>
