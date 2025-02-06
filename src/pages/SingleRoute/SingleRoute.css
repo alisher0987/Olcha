@@ -1,0 +1,171 @@
+.single-route {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.single-route-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.product-images {
+    flex: 1;
+    max-width: 600px;
+}
+
+.product-images img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.product-info {
+    flex: 1;
+    max-width: 500px;
+}
+
+.product-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.installment-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.installment-header button {
+    padding: 8px 16px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.installment-header button.active {
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.price-info {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.highlighted-price {
+    background: yellow;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.buy-now, .add-to-cart {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.buy-now {
+    flex: 1;
+    background: #f5f5f5;
+}
+
+.add-to-cart {
+    flex: 1;
+    background: #8833FF;
+    color: white;
+}
+
+.additional-info p {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .product-images {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .single-route-wrapper {
+        gap: 20px;
+    }
+    
+    .product-images {
+        max-width: 350px;
+    }
+    
+    .product-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .single-route-wrapper {
+        flex-direction: column;
+    }
+    
+    .product-images {
+        max-width: 100%;
+    }
+    
+    .product-info {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .installment-header {
+        flex-wrap: wrap;
+    }
+    
+    .installment-header button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .buy-now, .add-to-cart {
+        width: 100%;
+    }
+}

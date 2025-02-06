@@ -1,0 +1,249 @@
+.phones-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.phone-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+
+  transition: transform 0.2s;
+}
+
+.phone-card:hover {
+  transform: translateY(-5px);
+}
+
+.phone-card-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+}
+
+.heart-icon:hover {
+  color: red;
+}
+
+.phone-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.phone-name {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.price-container {
+  margin-bottom: 15px;
+}
+
+.main-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.monthly-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.monthly-price span {
+  background-color: #fff3cd;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-button {
+  padding: 10px;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+
+  color: #cf3d3d;
+  border-radius: 8px;
+border: 2px solid black;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+
+@media (max-width: 768px) {
+  .phones-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+
+/* ... existing code ... */
+
+/* Scroll'ni yoqotish uchun */
+.phones-container {
+  overflow: hidden;
+  -webkit-overflow-scrolling: none;
+  touch-action: none;
+}
+
+/* Desktop (1200px va undan yuqori) */
+@media (max-width: 1200px) {
+  .phones-container {
+    max-width: 960px;
+    padding: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .phone-image {
+    height: 180px;
+  }
+}
+
+/* Tablet Large (992px) */
+@media (max-width: 992px) {
+  .phones-container {
+    max-width: 720px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .phone-card {
+    padding: 12px;
+  }
+
+  .phone-image {
+    height: 160px;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .phones-container {
+    max-width: 540px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .phone-name {
+    font-size: 14px;
+  }
+
+  .main-price {
+    font-size: 16px;
+  }
+
+  .monthly-price {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Large (576px) */
+@media (max-width: 576px) {
+  .phones-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .phone-card {
+    padding: 10px;
+  }
+
+  .phone-image {
+    height: 140px;
+  }
+
+  .button-container {
+    gap: 8px;
+  }
+
+  .cart-button,
+  .buy-button {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile (400px) */
+@media (max-width: 400px) {
+  .phones-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .phone-card {
+    padding: 8px;
+  }
+
+  .phone-card-header {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
+
+  .phone-image {
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .phone-name {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .main-price {
+    font-size: 14px;
+  }
+
+  .monthly-price {
+    font-size: 11px;
+  }
+
+  .monthly-price span {
+    padding: 1px 6px;
+  }
+
+  .button-container {
+    gap: 6px;
+  }
+
+  .cart-button,
+  .buy-button {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

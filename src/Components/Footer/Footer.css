@@ -1,0 +1,165 @@
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .mobile-app h3,
+  .contact-info h3,
+  .info-links h3,
+  .payment-methods h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .app-links img,
+  .payment-icons img {
+    width: 100px;
+    margin: 5px;
+  }
+  
+  .contact-info .phone {
+    font-weight: bold;
+    color: #d32f2f;
+  }
+  
+  .info-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .info-links ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  /* ... existing code ... */
+
+/* Desktop (1200px va undan yuqori) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet Large (992px) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+    gap: 20px;
+  }
+
+  .mobile-app,
+  .contact-info,
+  .info-links,
+  .payment-methods {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-app,
+  .contact-info,
+  .info-links,
+  .payment-methods {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .mobile-app h3,
+  .contact-info h3,
+  .info-links h3,
+  .payment-methods h3 {
+    font-size: 16px;
+  }
+
+  .app-links img,
+  .payment-icons img {
+    width: 80px;
+  }
+}
+
+/* Mobile Large (576px) */
+@media (max-width: 576px) {
+  .footer {
+    padding: 15px 0;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .mobile-app h3,
+  .contact-info h3,
+  .info-links h3,
+  .payment-methods h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .app-links img,
+  .payment-icons img {
+    width: 70px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+
+/* Mobile (400px) */
+@media (max-width: 400px) {
+  .container {
+    padding: 5px;
+  }
+
+  .mobile-app,
+  .contact-info,
+  .info-links,
+  .payment-methods {
+    margin-bottom: 20px;
+  }
+
+  .mobile-app h3,
+  .contact-info h3,
+  .info-links h3,
+  .payment-methods h3 {
+    font-size: 14px;
+  }
+
+  .app-links img,
+  .payment-icons img {
+    width: 60px;
+    margin: 3px;
+  }
+
+  .info-links ul li {
+    margin: 3px 0;
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    margin-top: 15px;
+    font-size: 11px;
+  }
+}

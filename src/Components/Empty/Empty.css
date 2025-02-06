@@ -1,0 +1,30 @@
+.empty {
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .empty__deck {
+    padding: 16px 0;
+    color: #555;
+  }
+  
+  .empty__btn {
+    padding: 10px 20px;
+    background: var(--bg-py);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .empty__title {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  
+    .empty__deck {
+      line-height: 20px;
+    }
+  }
+  
