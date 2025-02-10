@@ -11,6 +11,7 @@ import User from './pages/User/User'
 import { DATA } from "./mock/index";
 import SingleRoute from './pages/SingleRoute/SingleRoute'
 import Footer from './Components/Footer/Footer'
+
 function App() {
   const location = useLocation();
 
@@ -25,15 +26,16 @@ function App() {
 
   return (
     <>
+
       <Navbar/>
 
    
     <Routes>
-        <Route path="/" element={<Home  />} />
+        <Route path="/" element={<Home data={DATA}  />} />
         <Route path="/like" element={<Like />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/User" element={<User />} />
-        <Route path='/card/:id' element={<SingleRoute/>}></Route>
+        <Route path='/product/:id' element={<SingleRoute/>}></Route>
       </Routes>
 <Footer/>
     </>

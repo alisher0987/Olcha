@@ -34,15 +34,15 @@ const Navbar = () => {
         </div>
 
         <div className="nav-links">
-          <Link to={"/Sevmlilar"} className="nav-link">
+          <Link to={"/like"} className="nav-link">
             <FiHeart />
             <span>Sevimlilar</span>
           </Link>
-          <Link to={"/Savatcha"} className="nav-link">
+          <Link to={"/shop"} className="nav-link">
             <FiShoppingCart />
             <span>Savatcha</span>
           </Link>
-          <Link to={"/Kirish"} className="nav-link">
+          <Link to={"/user"} className="nav-link">
             <FiUser />
             <span>Kirish</span>
           </Link>

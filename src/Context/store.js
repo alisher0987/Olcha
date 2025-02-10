@@ -1,10 +1,10 @@
-// store.js
-import { configureStore } from '@reduxjs/toolkit';
-import likeReducer from './likeSlice/';  // Import the likeSlice reducer
+import { configureStore } from "@reduxjs/toolkit";
+import cartReducer from "./cartSlice";
+import likeReducer from "./likeSlice";
 
-// Configure the Redux store
 export const store = configureStore({
-  reducer: {
-    likes: likeReducer,  // Attach the reducer to manage 'likes' state
-  },
+    reducer: {
+        cart: cartReducer,
+      Wishies: likeReducer
+    }
 });

@@ -1,25 +1,24 @@
-// likeSlice.js
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  value: [],  // Initialize the value as an empty array
-};
-
-const likeSlice = createSlice({
-  name: 'likes',
-  initialState,
+export const likeSlice = createSlice({
+  name: "Wishies",
+  initialState: {
+    value: JSON.parse(localStorage.getItem("wishes")) || [],
+  },
   reducers: {
-    incCart: (state, action) => {
-      state.value.push(action.payload);  // Example logic for incCart
+    addToWishies: (state, action) => {
+      const isExist = state.value.some((item) => item.id === action.payload.id);
+      if (!isExist) {
+        state.value.push(action.payload);
+        localStorage.setItem("wishes", JSON.stringify(state.value));
+      }
     },
-    addToLike: (state, action) => {
-      state.value.push(action.payload);  // Add to like logic
-    },
-    removeFromLike: (state, action) => {
-      state.value = state.value.filter(item => item.id !== action.payload.id);  // Remove from like logic
-    },
+    removeFromWishies: (state, action) => {
+      state.value = state.value.filter((el) => el.id !== action.payload.id);
+      localStorage.setItem("wishes", JSON.stringify(state.value));
+    }
   },
 });
 
-export const { incCart, addToLike, removeFromLike } = likeSlice.actions;
-export default likeSlice.reducer;  // This exports the reducer as the default export
+export const { addToWishies, removeFromWishies } = likeSlice.actions;
+export default likeSlice.reducer;
